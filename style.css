@@ -1,0 +1,184 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html.body {
+    width: 100%;
+    height: 100%;
+}
+
+nav{
+    width: 100%;
+    background-color: #111111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    position: fixed;
+    top: 0px;
+    z-index: 99;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav h2 {
+    color: #fff;
+    font-size: 30px;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 0px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+#main {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#text {
+    position: absolute;
+    font-size: 15px;
+    margin-left: 43%;
+    margin-top: 38%;
+    z-index: 20;
+    color: white;
+    opacity: 1;
+    transition-duration: 0.5s;
+}
+
+#v1 {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200%;
+    z-index: 1;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1)0.5s;
+}
+
+#v2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 200%;
+}
+
+.container {
+    display: flex;
+    margin-left: 40%;
+    margin-top: 40%;
+    position: absolute;
+    width: 35vh;
+    height: 7vh;
+    z-index: 9;
+}
+
+#drag {
+    position: absolute;
+    width: 7vh;
+    height: 7vh;
+}
+
+#dragme {
+    position: absolute;
+    width: 7vh;
+    height: 7vh;
+}
+
+.circ1 {
+    position: relative;
+    height: 7vh;
+    width: 7vh;
+    border-radius: 50%;
+    animation: circ1 10s linear infinite;
+    border: 4px dotted #fff;
+}
+
+#dragme2 {
+    width: 7vh;
+    height: 7vh;
+    position: absolute;
+}
+
+.circ2 {
+    position: relative;
+    top: 13.5%;
+    left: 13.5%;
+    height: 5vh;
+    width: 5vh;
+    border-radius: 50%;
+    animation: circ2 2s ease-out 1s infinite;
+    border: 3px solid rgb(255, 152, 17);
+    border-top: 4px solid rgba(255, 152, 17, 0);
+}
+
+.cir {
+    position: absolute;
+    right: 7%;
+    top: 33.5%;
+    width: 2vh;
+    height: 2vh;
+    border-radius: 50%;
+    transition-duration: 0.5s;
+    border: 3px solid rgb(255, 255, 255);
+    border-top: 4px solid rgba(255, 152, 17, 0);
+}
+
+.cir2 {
+    position: relative;
+    left: 10%;
+    width: 0.9vh;
+    height: 0.9vh;
+    border-radius: 50%;
+    background-color: rgb(255, 152, 17);
+}
+
+@keyframes circ1 {
+    0%{
+        rotate: -360deg;
+    }
+    100%{
+        rotate: 0deg;
+    }
+}
+
+@keyframes circ2 {
+    0%{
+        rotate: -360deg;
+    }
+    100%{
+        rotate: 0deg;
+    }
+}
+
+@keyframes cir {
+    0%{
+        rotate: 0deg;
+    }
+    100%{
+        rotate: -360deg;
+    }
+}
+
+/* 
+#c2 {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-top: 110px;
+    background-color: aqua;
+} */
